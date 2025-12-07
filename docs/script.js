@@ -118,7 +118,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             // Formspree Submission
             // IMPORTANT: Replace 'YOUR_FORMSPREE_ID' with your actual Form ID from https://formspree.io/
-            const formId = 'YOUR_FORMSPREE_ID';
+            const formId = 'mgvgzgjr';
 
             if (formId === 'YOUR_FORMSPREE_ID') {
                 alert('Please configure your Formspree ID in script.js to enable email sending.');
