@@ -116,28 +116,13 @@ document.addEventListener('DOMContentLoaded', () => {
                 message: contactForm.querySelector('textarea').value
             };
 
-            try {
-                const response = await fetch('http://localhost:3000/submit-request', {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json'
-                    },
-                    body: JSON.stringify(formData)
-                });
-
-                if (response.ok) {
-                    alert('Request submitted successfully! We will contact you shortly.');
-                    contactForm.reset();
-                } else {
-                    alert('Failed to submit request. Please try again.');
-                }
-            } catch (error) {
-                console.error('Error:', error);
-                alert('An error occurred. Please check your connection.');
-            } finally {
+            // Simulate form submission for static site demo
+            setTimeout(() => {
+                alert('Request submitted successfully! We will contact you shortly.');
+                contactForm.reset();
                 submitBtn.innerText = originalBtnText;
                 submitBtn.disabled = false;
-            }
+            }, 1500);
         });
     }
 });
