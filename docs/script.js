@@ -116,13 +116,45 @@ document.addEventListener('DOMContentLoaded', () => {
                 message: contactForm.querySelector('textarea').value
             };
 
-            // Simulate form submission for static site demo
-            setTimeout(() => {
-                alert('Request submitted successfully! We will contact you shortly.');
-                contactForm.reset();
+            // Formspree Submission
+            // IMPORTANT: Replace 'YOUR_FORMSPREE_ID' with your actual Form ID from https://formspree.io/
+            const formId = 'YOUR_FORMSPREE_ID';
+
+            if (formId === 'YOUR_FORMSPREE_ID') {
+                alert('Please configure your Formspree ID in script.js to enable email sending.');
                 submitBtn.innerText = originalBtnText;
                 submitBtn.disabled = false;
-            }, 1500);
+                return;
+            }
+
+            try {
+                const response = await fetch(`https://formspree.io/f/${formId}`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Accept': 'application/json'
+                    },
+                    body: JSON.stringify(formData)
+                });
+
+                if (response.ok) {
+                    alert('Request submitted successfully! We will contact you shortly.');
+                    contactForm.reset();
+                } else {
+                    const data = await response.json();
+                    if (Object.hasOwn(data, 'errors')) {
+                        alert(data["errors"].map(error => error["message"]).join(", "));
+                    } else {
+                        alert('Failed to submit request. Please try again.');
+                    }
+                }
+            } catch (error) {
+                console.error('Error:', error);
+                alert('An error occurred. Please check your connection.');
+            } finally {
+                submitBtn.innerText = originalBtnText;
+                submitBtn.disabled = false;
+            }
         });
     }
 });
