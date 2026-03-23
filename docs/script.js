@@ -78,6 +78,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 border-bottom: 1px solid rgba(255,255,255,0.1);
                 animation: slideDown 0.3s ease-out;
             }
+            .nav-links.active a {
+                color: #ffffff !important;
+            }
             @keyframes slideDown {
                 from { opacity: 0; transform: translateY(-20px); }
                 to { opacity: 1; transform: translateY(0); }

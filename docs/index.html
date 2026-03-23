@@ -84,16 +84,15 @@
         <section id="home" class="hero-section">
             <div class="hero-content">
                 <div class="badge">Next-Gen Permitting</div>
-                <h1>High-quality, on-time <br><span class="gradient-text">Solar Design Support</span></h1>
-                <p>Adaptivolt Power specializes in fast, compliant, and accurate solar engineering support
-                    exclusively for the United States solar market.</p>
+                <h1>High-quality, <span style="white-space: nowrap;">on-time</span> <br><span class="gradient-text">Solar Design Support</span></h1>
+                <p class="hero-subtext">Submit your project inputs by end of day.<br><strong>Get clean, AHJ-ready plans by next morning.</strong><br>No back-and-forth. No unnecessary delays.</p>
                 <div class="hero-btns">
                     <a href="#contact" class="btn-primary">Start Your Permit</a>
                     <a href="#services" class="btn-secondary">Explore Services</a>
                 </div>
                 <div class="stats-container">
                     <div class="stat-item">
-                        <span class="stat-number">24h</span>
+                        <span class="stat-number">12-24h</span>
                         <span class="stat-label">Turnaround</span>
                     </div>
                     <div class="stat-item">
@@ -117,6 +116,13 @@
                         </div>
                     </div>
                 </div>
+            </div>
+        </section>
+
+        <section id="problem" class="problem-section">
+            <div class="problem-container glass-card text-center">
+                <h2>How often do your projects get delayed due to slow permit design turnaround or AHJ revisions?</h2>
+                <p>At <span class="highlight font-bold">Adaptivolt Power</span>, we help solar EPCs avoid exactly that.</p>
             </div>
         </section>
 
@@ -209,7 +215,7 @@
             <div class="features-grid">
                 <div class="feature-item">
                     <i class="fas fa-clock"></i>
-                    <span>24–48 hour turnaround</span>
+                    <span>12 to 24 hour turnaround</span>
                 </div>
                 <div class="feature-item">
                     <i class="fas fa-ruler-combined"></i>
@@ -234,6 +240,49 @@
                 <div class="feature-item">
                     <i class="fas fa-stamp"></i>
                     <span>Engineering partner support (structural & electrical stamps)</span>
+                </div>
+            </div>
+        </section>
+
+        <section id="pricing" class="pricing-section">
+            <div class="section-header">
+                <h2>Our Design Packages</h2>
+                <p>Plans designed to minimize AHJ comments & rejections. Contact us for volume pricing!</p>
+            </div>
+            <div class="pricing-grid">
+                <!-- Promo Pricing -->
+                <div class="pricing-card promo glass-card">
+                    <div class="promo-badge">Try It Risk-Free</div>
+                    <h3>First Design Free</h3>
+                    <div class="price" style="font-size: 2.5rem;">$0</div>
+                    <p>Evaluate our speed & quality</p>
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-bolt"></i> Fast turnaround: 12 to 24 hours</li>
+                        <li><i class="fas fa-check"></i> Full CAD layout & SLD included</li>
+                    </ul>
+                    <a href="#contact" class="btn-primary full-width text-center" style="display: block; margin-top: 2rem;">Claim Free Sample</a>
+                </div>
+                <!-- Standard -->
+                <div class="pricing-card glass-card">
+                    <h3>Unstamped Permit</h3>
+                    <div class="price" style="font-size: 1.8rem; padding-top: 0.8rem; padding-bottom: 0.8rem;">Custom Quote</div>
+                    <p>Standard full permit package</p>
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-check"></i> Complete design package</li>
+                        <li><i class="fas fa-check"></i> AHJ-ready & Code Compliant</li>
+                    </ul>
+                    <a href="#contact" class="btn-secondary full-width text-center" style="display: block; margin-top: 2rem;">Contact for Pricing</a>
+                </div>
+                <!-- Premium -->
+                <div class="pricing-card glass-card">
+                    <h3>Design + Stamped</h3>
+                    <div class="price" style="font-size: 1.8rem; padding-top: 0.8rem; padding-bottom: 0.8rem;">Custom Quote</div>
+                    <p>Complete stamped package</p>
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-stamp"></i> Structural & Electrical Stamps</li>
+                        <li><i class="fas fa-check"></i> Ready for portal upload</li>
+                    </ul>
+                    <a href="#contact" class="btn-secondary full-width text-center" style="display: block; margin-top: 2rem;">Contact for Pricing</a>
                 </div>
             </div>
         </section>
@@ -292,12 +341,11 @@
         <section id="contact" class="contact-section">
             <div class="contact-container glass-panel">
                 <div class="contact-info">
-                    <h2>Ready to Streamline Your Solar Design Process?</h2>
-                    <p>Let us handle permit drawings while your team focuses on selling and installing.</p>
+                    <h2>Claim Your Free Sample Project</h2>
+                    <p>Evaluate our speed and quality before committing. If you have an upcoming project, this could help you save both time and cost immediately.</p>
                     <ul class="contact-list">
                         <li><i class="fas fa-envelope"></i> permits@adaptivoltpower.com</li>
-                        <li><i class="fas fa-check"></i> Need a permit package quote? We’re ready to support your
-                            projects.</li>
+                        <li><i class="fas fa-gift"></i> Just select "Request Free Sample" or share a project file—we’ll take it from there.</li>
                     </ul>
                 </div>
                 <form class="contact-form">
@@ -310,6 +358,7 @@
                     <div class="form-group">
                         <select name="service">
                             <option value="" disabled selected>Service Needed</option>
+                            <option value="free_sample">🎁 Request Free Sample</option>
                             <option value="site_plan">Site Plan & Roof Layout</option>
                             <option value="sld">Electrical SLD</option>
                             <option value="permit_package">Permit Package</option>

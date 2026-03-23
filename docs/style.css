@@ -2,10 +2,14 @@
     --bg-color: #f4f7f9;
     --card-bg: rgba(255, 255, 255, 0.85);
     --glass-border: rgba(0, 0, 0, 0.08);
-    --primary-color: #3eb2f0; /* Logo light blue */
-    --secondary-color: #f7b731; /* Logo yellow lightning */
-    --accent-color: #4cd9a3; /* Logo green */
-    --text-color: #2c3e50; /* Logo dark navy */
+    --primary-color: #3eb2f0;
+    /* Logo light blue */
+    --secondary-color: #f7b731;
+    /* Logo yellow lightning */
+    --accent-color: #4cd9a3;
+    /* Logo green */
+    --text-color: #2c3e50;
+    /* Logo dark navy */
     --text-muted: #7f8c8d;
     --font-heading: 'Outfit', sans-serif;
     --font-body: 'Space Grotesk', sans-serif;
@@ -266,7 +270,7 @@ nav {
 
 .stats-container {
     display: flex;
-    gap: 3rem;
+    justify-content: space-between;
     border-top: 1px solid var(--glass-border);
     padding-top: 2rem;
 }
@@ -354,7 +358,7 @@ nav {
 
 /* --- Services Section --- */
 .services-section {
-    padding: 8rem 10%;
+    padding: 2rem 10% 8rem 10%;
     max-width: 1400px;
     margin: 0 auto;
 }
@@ -664,6 +668,153 @@ footer {
     color: var(--primary-color);
 }
 
+/* --- Utilities --- */
+.text-center {
+    text-align: center;
+}
+
+.font-bold {
+    font-weight: 700;
+}
+
+.hero-subtext {
+    font-size: 1.1rem;
+    color: var(--text-color);
+    margin-bottom: 2.5rem;
+    max-width: 500px;
+}
+
+/* --- Problem Section --- */
+.problem-section {
+    padding: 3rem 10%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.problem-container {
+    padding: 3.5rem 2rem !important;
+    border-radius: 20px;
+    background: linear-gradient(135deg, rgba(62, 178, 240, 0.05), rgba(76, 217, 163, 0.05));
+    border: 1px solid var(--primary-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.problem-container h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: var(--text-color);
+}
+
+.problem-container p {
+    font-size: 1.2rem;
+    color: var(--text-muted);
+    margin-bottom: 0;
+}
+
+/* --- Pricing Section --- */
+.pricing-section {
+    padding: 8rem 10%;
+    max-width: 1400px;
+    margin: 0 auto;
+    background: linear-gradient(180deg, transparent, rgba(62, 178, 240, 0.02), transparent);
+}
+
+.pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    align-items: center;
+}
+
+.pricing-card {
+    padding: 3rem 2rem;
+    text-align: center;
+    border-radius: 20px;
+    position: relative;
+    border: 1px solid var(--glass-border);
+    transition: var(--transition);
+}
+
+.pricing-card.promo {
+    border: 2px solid var(--primary-color);
+    transform: scale(1.05);
+    background: #ffffff;
+    box-shadow: 0 15px 35px rgba(62, 178, 240, 0.1);
+}
+
+.pricing-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.05);
+}
+
+.pricing-card.promo:hover {
+    transform: scale(1.05) translateY(-10px);
+}
+
+.promo-badge {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    transform: none;
+    background: var(--primary-color);
+    color: white;
+    padding: 0.5rem 0;
+    border-radius: 0;
+    font-size: 0.8rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.pricing-card.promo {
+    padding-top: 3.5rem;
+}
+
+.pricing-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.price {
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: var(--text-color);
+    margin-bottom: 0.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.price span {
+    font-size: 1.5rem;
+    margin-top: 0.5rem;
+}
+
+.pricing-card p {
+    color: var(--text-muted);
+    margin-bottom: 2rem;
+}
+
+.pricing-features {
+    list-style: none;
+    text-align: left;
+    margin-bottom: 2rem;
+}
+
+.pricing-features li {
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.pricing-features i {
+    color: var(--primary-color);
+}
+
 /* --- Responsive --- */
 @media (max-width: 768px) {
     .nav-links {
@@ -689,7 +840,19 @@ footer {
     }
 
     .stats-container {
-        justify-content: center;
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 0.5rem;
+        border-top: 1px solid var(--glass-border);
+        width: 100%;
+    }
+
+    .stat-number {
+        font-size: 1.2rem;
+    }
+
+    .stat-label {
+        font-size: 0.65rem;
     }
 
     .contact-container {
@@ -703,6 +866,14 @@ footer {
 
     .timeline-item {
         gap: 1.5rem;
+    }
+
+    .problem-container {
+        padding: 3.5rem 2rem !important;
+    }
+
+    .services-section {
+        padding-top: 0;
     }
 
     .step-number {
