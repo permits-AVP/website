@@ -620,6 +620,13 @@ nav {
     margin-top: 0;
 }
 
+.contact-link span {
+    flex: 1;
+    min-width: 0;
+    word-break: break-word;
+    overflow-wrap: break-word;
+}
+
 .contact-link:hover {
     color: var(--primary-color);
 }
@@ -918,8 +925,12 @@ footer {
 
     .contact-link {
         font-size: 1rem;
+        width: 100%;
+        min-width: 0;
+    }
+
+    .contact-link span {
         word-break: break-all;
-        overflow-wrap: break-word;
     }
 
     .timeline::before {
