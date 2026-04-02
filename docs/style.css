@@ -904,7 +904,22 @@ footer {
 
     .contact-container {
         grid-template-columns: 1fr;
-        padding: 2rem;
+        padding: 1.5rem;
+    }
+
+    .contact-list li {
+        font-size: 1rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .contact-list i {
+        font-size: 1.2rem;
+    }
+
+    .contact-link {
+        font-size: 1rem;
+        word-break: break-all;
+        overflow-wrap: break-word;
     }
 
     .timeline::before {
